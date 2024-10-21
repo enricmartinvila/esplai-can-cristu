@@ -32,7 +32,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`w-full bg-[#F4C3C9] text-black py-4 flex items-center shadow-md fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
+    <>
+    <header className={`w-full bg-[#F4C3C9] mb-2 text-black py-4 flex items-center shadow-md fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
       {/* Logo */}
       <div className="flex items-center mx-10">
         <img src="/images/logo1.jpeg" alt="Logo" className={`transition-all duration-300 ${isScrolled ? 'w-12' : 'w-16'}`} />
@@ -41,7 +42,7 @@ export default function Header() {
       {/* Contenedor centrado para el texto del menú */}
       <div className="w-full flex mx-16">
         <nav className={"w-full mobile:hidden tablet:block transition-transform duration-300 ease-in-out"}>
-          <ul className="flex flex-row justify-between md:flex-row gap-2 font-bold text-[#9e3841] text-xl">
+          <ul className="flex flex-row justify-between md:flex-row gap-2 font-bold text-[#9e3841] mobile:text-xs tablet:text-base laptop:text-xl">
             <li>
               <Link to={'/'}>{translations.menu.main}</Link>
             </li>
@@ -64,5 +65,6 @@ export default function Header() {
         </nav>
       </div>
     </header>
+    </>
   );
 }
