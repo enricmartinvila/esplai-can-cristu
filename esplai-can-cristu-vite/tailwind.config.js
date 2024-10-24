@@ -10,6 +10,12 @@ export default {
         'desktop': '1920px',    // Desktop breakpoint
         'xl': '2560px',         // Extra-large breakpoint
       },
+      colors: {
+        'text': '#9e3841', // Custom text color
+        'bg': '#F4C3C9', // Custom text color
+        'pur': '#B17BAA', // Custom text color
+        'gran': '#7C2430', // Custom text color
+      },
     },
   },
   plugins: [],

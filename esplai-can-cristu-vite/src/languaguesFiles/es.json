@@ -24,5 +24,9 @@
   },
   "maintexts": {
     "text": "DISFRUTA Y DETÉN EL TIEMPO"
+  },
+  "calendarPage": {
+    "title": "Calendario",
+    "text": "Aquí podrás ver los eventos que tenemos programados para este año."
   }
 }

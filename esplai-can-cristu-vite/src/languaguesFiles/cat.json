@@ -24,5 +24,9 @@
   },
   "maintexts": {
     "text": "GAUDEIX I ATURA EL TEMPS"
+  },
+  "calendarPage": {
+    "title": "Calendari",
+    "text": "Aquí pots veure els esdeveniments que es realitzaran durant el curs"
   }
 }
