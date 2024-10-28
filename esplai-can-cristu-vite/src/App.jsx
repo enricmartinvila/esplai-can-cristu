@@ -7,6 +7,7 @@ import { Ideari } from './Pages/Ideari';
 import './Pages/MainPage';
 import MainPage from './Pages/MainPage';
 import { Routes, Route } from 'react-router-dom';
+import QuiSom from './Pages/QuiSom';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
           <div className='mt-[5%] px-8 py-24'>
             <Routes>
               <Route path="/" element={<MainPage />} />
-              <Route path="/qui-som" element={""} />
+              <Route path="/qui-som" element={<QuiSom/> } />
               <Route path="/ideari" element={<Ideari />} />
               <Route path="/calendari" element={<Calendar/>} />
               <Route path="/inscripcions" element={""} />

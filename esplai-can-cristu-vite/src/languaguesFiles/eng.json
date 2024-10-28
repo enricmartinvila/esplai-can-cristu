@@ -28,5 +28,16 @@
   "calendarPage": {
     "title": "Calendar",
     "text": "Here you can see the events that will take place during the course."
+  },
+  "reccountCardsSubTexts": {
+    "firstText": "Years making history",
+    "secondText": "Groups",
+    "thirdText": "Children"
+  },
+  "quisom": {
+    "title": "Who we are",
+    "text1": "We are Esplai Can Cristu, a non-profit leisure center located in premises provided by the parish of Cristo Rey, at Calle Carrió, 22 in Manresa.",
+    "text2": "The premises are a three-story building consisting of several rooms, behind the church of Cristo Rey. The neighborhood where Esplai Can Cristu is located is called Paseo and Surroundings and is situated in the city center, around Paseo Pere III. It is a well-off neighborhood with a socio-economic demographic mainly of upper-middle class, mostly aged between 40 and 50 years.",
+    "text3": "It is characterized by the presence of Paseo Pere III, the main pedestrian street of Manresa, which, along with the surrounding streets, gathers most of the local commerce and where various cultural entities of the city are grouped. The church of Cristo Rey, behind which the premises of the esplai are located, is situated in the first section of the Paseo."
   }
 }

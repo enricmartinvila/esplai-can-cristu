@@ -28,5 +28,16 @@
   "calendarPage": {
     "title": "Calendario",
     "text": "Aquí podrás ver los eventos que tenemos programados para este año."
+  },
+  "reccountCardsSubTexts": {
+    "firstText": "Años haciendo historia",
+    "secondText": "Grupos",
+    "thirdText": "Niños"
+  },
+  "quisom": {
+    "title": "Quiénes somos",
+    "text1": "Somos el Esplai Can Cristu, un centro de ocio sin ánimo de lucro que se encuentra en unos locales cedidos por la parroquia de Cristo Rey, en la Calle Carrió, 22 de Manresa.",
+    "text2": "Los locales son un edificio de tres pisos que consta de varias salas, detrás de la iglesia de Cristo Rey. El barrio donde se encuentra el esplai Can Cristu se llama Paseo y Alrededores y está situado en el centro de la ciudad, alrededor del Paseo Pere III. Es un barrio acomodado con una demografía de posición socioeconómica principalmente media-alta, la mayoría situada entre los 40 y los 50 años.",
+    "text3": "Se caracteriza por la presencia del Paseo Pere III, la principal calle peatonal de Manresa, que reúne, junto con las calles de los alrededores, la mayoría del comercio local y donde se agrupan diversas entidades culturales de la ciudad. La iglesia de Cristo Rey, detrás de la cual se encuentran los locales del esplai, está situada en el primer tramo del Paseo."
   }
 }
