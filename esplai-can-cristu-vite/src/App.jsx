@@ -8,23 +8,23 @@ import './Pages/MainPage';
 import MainPage from './Pages/MainPage';
 import { Routes, Route } from 'react-router-dom';
 import QuiSom from './Pages/QuiSom';
-
+import Inscripcions from './Pages/Inscripcions';
 
 function App() {
   return (
     <>
       <I18nProvider>
+        <div className=" size-full py-24 font-sans bg-gradient-to-br from-bg to-text">
           <Header />
-          <div className='mt-[5%] px-8 py-24'>
-            <Routes>
-              <Route path="/" element={<MainPage />} />
-              <Route path="/qui-som" element={<QuiSom/> } />
-              <Route path="/ideari" element={<Ideari />} />
-              <Route path="/calendari" element={<Calendar/>} />
-              <Route path="/inscripcions" element={""} />
-              <Route path="/contacte" element={<Contacte />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/qui-som" element={<QuiSom />} />
+            <Route path="/ideari" element={<Ideari />} />
+            <Route path="/calendari" element={<Calendar />} />
+            <Route path="/inscripcions" element={<Inscripcions />} />
+            <Route path="/contacte" element={<Contacte />} />
+          </Routes>
+        </div>
       </I18nProvider>
     </>
   );

@@ -7,22 +7,20 @@ export default function Contacte() {
 
   return (
     <div
-      id="contacto"
       className="flex-col items-center justify-center text-center"
     >
-      <h1 className="text-3xl m-5 font-bold my-24">
+      <h1 className="text-5xl desktop:text-6xl pb-12 p-5 font-bold text-white">
         {translations.titles.contact}
       </h1>
       <div className="flex items-center justify-center">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2979.978258593224!2d1.7557528760743542!3d41.67781297126447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQwJzQwLjEiTiAxwrA0NSczMC4wIkU!5e0!3m2!1ses!2ses!4v1713543105295!5m2!1ses!2ses"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.6332084795445!2d1.8204971764964035!3d41.72843307477101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4580d736c2c79%3A0xcf0af0fca977fed9!2sCarrer%20de%20Carri%C3%B3%2C%2022%2C%2008242%20Manresa%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1731952799717!5m2!1ses!2ses"
           style={{ width: '80%', height: '500px' }}
           loading="lazy"
         ></iframe>
       </div>
       <div className="flex-color w-full h-44 items-center justify-center text-center">
-        <p className="text-xl font-bold my-3">Alba</p>
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-4">
           <ul className="flex flex-col items-center justify-center md:items-start">
             <li className="flex items-center my-2 gap-2">
               <MapPinIcon className="h-6 w-6" />
@@ -31,8 +29,7 @@ export default function Contacte() {
                   href="https://maps.app.goo.gl/5RJqMXFDqSaJkfdMA"
                   className="font-bold"
                 >
-                  Raval del Sellarês, Cal Masses, s/n 08253-St. Salvador de
-                  Guardiola
+                 Carrer de Carrió, 22, 08242 Manresa, Barcelona
                 </a>
               </span>
             </li>
@@ -40,19 +37,10 @@ export default function Contacte() {
               <EnvelopeIcon className="h-6 w-6" />
               <a
                 className="cursor-pointer font-semibold"
-                href="mailto:calmasses@gmail.com"
+                href="                esplai.cancristu@gmail.com
+"
               >
-                calmasses@gmail.com
-              </a>
-            </li>
-            <li className="flex items-center justify-start my-2 gap-2">
-              <PhoneIcon className="h-5 w-5" />
-              <a
-                className="cursor-pointer font-semibold"
-                href="tel:calmasses@gmail.com"
-              >
-                {' '}
-                +34 690332521
+                esplai.cancristu@gmail.com
               </a>
             </li>
           </ul>

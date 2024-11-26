@@ -23,7 +23,7 @@ const RecountCard = ({ count, color, subText }: RecountCardProps) => {
     }, [count]);
 
     return (
-        <div className={`${color} text-white shadow-md rounded-lg p-6 text-center`}>
+        <div className={`${color} text-white shadow-md rounded-lg p-6 text-center w-44`}>
             <div className="text-4xl font-bold text-white">
                 {currentCount}
             </div>

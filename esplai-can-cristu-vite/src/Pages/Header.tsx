@@ -33,38 +33,139 @@ export default function Header() {
 
   return (
     <>
-    <header className={`w-full bg-[#F4C3C9] mb-2 text-black py-4 flex items-center shadow-md fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
-      {/* Logo */}
-      <div className="flex items-center mx-10">
-        <img src="/images/logo1.jpeg" alt="Logo" className={`transition-all duration-300 ${isScrolled ? 'w-12' : 'w-16'}`} />
-      </div>
+      <header
+        className={`w-full mb-2 py-4 flex items-center fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}
+      >
+        {/* Logo */}
+        <div className="flex items-center mx-10 bg-transparent">
+          <img
+            src="/images/logo1.jpeg"
+            alt="Logo"
+            className={`transition-all duration-300 ${isScrolled ? 'w-12' : 'w-16'}`}
+          />
+        </div>
 
-      {/* Contenedor centrado para el texto del menú */}
-      <div className="w-full flex mx-16">
-        <nav className={"w-full mobile:hidden tablet:block transition-transform duration-300 ease-in-out"}>
-          <ul className="flex flex-row justify-between md:flex-row gap-2 font-bold text-[#9e3841] mobile:text-xs tablet:text-base laptop:text-xl">
-            <li>
-              <Link to={'/'}>{translations.menu.main}</Link>
-            </li>
-            <li>
-              <Link to={'/qui-som'}>{translations.menu.who}</Link>
-            </li>
-            <li>
-              <Link to={'/ideari'}>{translations.menu.ideas}</Link>
-            </li>
-            <li>
-              <Link to={'/calendari'}>{translations.menu.calendar}</Link>
-            </li>
-            <li>
-              <Link to={'/inscripcions'}>{translations.menu.inscriptions}</Link>
-            </li>
-            <li>
-              <Link to={'/contacte'}>{translations.menu.contact}</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+        {/* Hamburger Menu for Mobile */}
+        <div className="absolute top-4 right-4 tablet:hidden">
+          <button onClick={toggleMenu} className="text-[#9e3841]">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        {/* Contenedor centrado para el texto del menú */}
+        <div className="w-full flex mx-16">
+          <nav
+            className={
+              'w-full hidden tablet:block transition-transform duration-300 ease-in-out'
+            }
+          >
+            <ul className="flex flex-row items-center justify-center md:flex-row gap-24 font-bold text-white mobile:text-xs tablet:text-base laptop:text-xl">
+              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <Link to={'/'} className="text-[#9e3841]">
+                  {translations.menu.main}
+                </Link>
+              </li>
+              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <Link to={'/qui-som'} className="text-[#9e3841]">
+                  {translations.menu.who}
+                </Link>
+              </li>
+              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <Link to={'/ideari'} className="text-[#9e3841]">
+                  {translations.menu.ideas}
+                </Link>
+              </li>
+              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <Link to={'/calendari'} className="text-[#9e3841]">
+                  {translations.menu.calendar}
+                </Link>
+              </li>
+              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <Link to={'/inscripcions'} className="text-[#9e3841]">
+                  {translations.menu.inscriptions}
+                </Link>
+              </li>
+              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <Link to={'/contacte'} className="text-[#9e3841]">
+                  {translations.menu.contact}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      {/* Full-screen Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-[#F4C3C9] z-20 flex flex-col items-center justify-center">
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 text-[#9e3841]"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+          <nav>
+            <ul className="flex flex-col items-center gap-8 font-bold text-[#9e3841] text-2xl">
+              <li>
+                <Link to={'/'} onClick={toggleMenu}>
+                  {translations.menu.main}
+                </Link>
+              </li>
+              <li>
+                <Link to={'/qui-som'} onClick={toggleMenu}>
+                  {translations.menu.who}
+                </Link>
+              </li>
+              <li>
+                <Link to={'/ideari'} onClick={toggleMenu}>
+                  {translations.menu.ideas}
+                </Link>
+              </li>
+              <li>
+                <Link to={'/calendari'} onClick={toggleMenu}>
+                  {translations.menu.calendar}
+                </Link>
+              </li>
+              <li>
+                <Link to={'/inscripcions'} onClick={toggleMenu}>
+                  {translations.menu.inscriptions}
+                </Link>
+              </li>
+              <li>
+                <Link to={'/contacte'} onClick={toggleMenu}>
+                  {translations.menu.contact}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      )}
     </>
   );
 }

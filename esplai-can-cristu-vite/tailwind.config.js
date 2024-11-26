@@ -16,6 +16,9 @@ export default {
         'pur': '#B17BAA', // Custom text color
         'gran': '#7C2430', // Custom text color
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'], // Example for Google Fonts
+      },
     },
   },
   plugins: [],

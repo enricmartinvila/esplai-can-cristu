@@ -2,9 +2,24 @@ import React from 'react';
 import { calendarText } from '../constants/CalendarConstants';
 
 const Timeline = () => {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+  const currentDay = currentDate.getDate();
+
+  const upcomingEvents = calendarText.filter((item) => {
+    const eventDate = item.date ? new Date(item.date) : new Date();
+    return (
+      (eventDate.getFullYear() === currentYear &&
+        (eventDate.getMonth() > currentMonth ||
+          (eventDate.getMonth() === currentMonth && eventDate.getDate() >= currentDay))) ||
+      eventDate.getFullYear() === currentYear + 1
+    );
+  });
+
   return (
     <ol className="relative border-s border-gran">
-      {calendarText.map((item, index) => (
+      {upcomingEvents.map((item, index) => (
         <li key={index} className="mb-14 ms-6">
           <div className="absolute w-4 h-4 bg-gran rounded-full mt-2 -start-2 border border-white"></div>
           <time className="mb-2 text-lg font-normal leading-none text-gray-400">
