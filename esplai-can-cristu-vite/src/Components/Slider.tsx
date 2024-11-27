@@ -18,11 +18,11 @@ export default function Slider() {
     'images/img14.webp',
     'images/img15.webp',
     'images/img16.webp',
-    'images/img17.webp',
-    'images/img18.webp',
-    'images/img19.webp',
-    'images/img20.webp',
-    'images/img21.webp',
+    'images/img17.png',
+    'images/img18.png',
+    'images/img19.png',
+    'images/img20.png',
+    'images/img21.png',
   ];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -60,7 +60,7 @@ export default function Slider() {
         <img
           src={images[currentImage]}
           alt={`Slide ${currentImage}`}
-          className="  object-cover h-screen"
+          className="object-cover"
         />
         <button
           onClick={handleNextClick}

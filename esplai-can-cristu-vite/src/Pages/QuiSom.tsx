@@ -11,7 +11,7 @@ const QuiSom = () => {
       <div className="flex-col mobile:flex-col tablet:flex-row justify-center gap-8 mb-8">
         <div className="flex flex-col gap-4 mobile:gap-4 tablet:gap-10 tablet:flex-row">
           <RecountCard
-            count={115}
+            count={54}
             color="bg-[#9e3841]"
             subText={translations.reccountCardsSubTexts.firstText}
           />
@@ -21,7 +21,7 @@ const QuiSom = () => {
             subText={translations.reccountCardsSubTexts.secondText}
           />
           <RecountCard
-            count={114}
+            count={112}
             color="bg-[#b85562]"
             subText={translations.reccountCardsSubTexts.thirdText}
           />

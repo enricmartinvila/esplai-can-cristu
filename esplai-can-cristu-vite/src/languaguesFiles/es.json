@@ -49,5 +49,16 @@
   "inscripcions": {
     "title": "Inscripciones",
     "enter_form_button": "Acceder al formulario"
+  },
+  "mainPage": {
+    "text-slider-titles": {
+      "what": "¿Qué?",
+      "how": "¿Como?",
+      "who": "¿Quién?",
+      "when": "¿Cuando?"
+    },
+    "text-slider-textes": {
+
+    }
   }
 }

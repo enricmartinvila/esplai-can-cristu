@@ -13,8 +13,8 @@ import Inscripcions from './Pages/Inscripcions';
 function App() {
   return (
     <>
-      <I18nProvider>
-        <div className=" size-full py-24 font-sans bg-gradient-to-br from-bg to-text">
+      <div className="min-h-screen w-screen pt-[4.75rem] font-sans bg-gradient-to-br from-[#e6a2ab] to-[#dd853e]">
+        <I18nProvider>
           <Header />
           <Routes>
             <Route path="/" element={<MainPage />} />
@@ -24,8 +24,8 @@ function App() {
             <Route path="/inscripcions" element={<Inscripcions />} />
             <Route path="/contacte" element={<Contacte />} />
           </Routes>
-        </div>
-      </I18nProvider>
+        </I18nProvider>
+      </div>
     </>
   );
 }
