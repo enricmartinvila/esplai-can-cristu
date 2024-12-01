@@ -40,7 +40,7 @@
     "text2": "Los locales son un edificio de tres pisos que consta de varias salas, detrás de la iglesia de Cristo Rey. El barrio donde se encuentra el esplai Can Cristu se llama Paseo y Alrededores y está situado en el centro de la ciudad, alrededor del Paseo Pere III. Es un barrio acomodado con una demografía de posición socioeconómica principalmente media-alta, la mayoría situada entre los 40 y los 50 años.",
     "text3": "Se caracteriza por la presencia del Paseo Pere III, la principal calle peatonal de Manresa, que reúne, junto con las calles de los alrededores, la mayoría del comercio local y donde se agrupan diversas entidades culturales de la ciudad. La iglesia de Cristo Rey, detrás de la cual se encuentran los locales del esplai, está situada en el primer tramo del Paseo."
   },
- "historiaDelCentre": {
+  "historiaDelCentre": {
     "title": "Historia del centro",
     "text1": "Durante el año 1967, el Movimiento Junior llegó a Cristo Rey, aunque al principio era muy diferente de cómo es hoy. La principal diferencia es que en el pasado, los niños y las niñas estaban en grupos separados. Unos años más tarde, entre 1972 y 1973, el grupo de niñas se trasladó a la ubicación actual de Cristo Rey, en la Calle Carrió número 22. Después de un tiempo, los niños también lo hicieron, por lo que los niños y las niñas comenzaron a compartir las instalaciones, pero aún no compartían grupos. No fue hasta el año 1974-1975 que comenzaron a ser grupos mixtos.",
     "text2": "Años más tarde, en 1978, después de una asamblea celebrada en Manresa, el Movimiento Junior se convirtió en MIJAC, es decir, el Movimiento Infantil y Juvenil de Acción Católica, pero la dinámica del centro siguió siendo la misma. Fue ese mismo año cuando MIJAC experimentó un crecimiento espectacular y muchos niños y niñas se unieron. Durante el curso escolar 2020-21, se realizaron una serie de cambios en el centro, haciendo el proceso para cambiar la entidad y formar parte de Esplac, y el curso escolar 2021-22 comenzó como una nueva entidad, cambiando el nombre de Mijac Cristo Rey a Esplai Can Cristu.",
@@ -58,7 +58,10 @@
       "when": "¿Cuando?"
     },
     "text-slider-textes": {
-
+      "what": "Es un espacio donde nos divertimos y descubrimos el mundo jugando. Donde aprendemos, hacemos excursiones y nos implicamos en nuestro entorno para transformar la sociedad. ¡En el esplai hacemos nuevas amigas y amigos!",
+      "how": "A partir de juegos, gincanas y talleres, aprendemos a trabajar en equipo y a gestionar nuestras emociones. Reivindicamos los derechos de los niños y nos educamos en valores como la solidaridad, la cooperación y el respeto.",
+      "who": "En el esplai participamos niños de entre cinco y diecisiete años y monitores y monitoras, de base voluntaria, de dieciocho años en adelante.",
+      "when": "La mayoría de actividades las realizamos el sábado por la mañana o por la tarde. Durante las vacaciones escolares, hacemos campamentos, colonias y rutas para disfrutar de la naturaleza y divertirnos conviviendo."
     }
   }
 }

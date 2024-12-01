@@ -13,16 +13,16 @@ export default function Slider() {
     'images/img9.webp',
     'images/img10.webp',
     'images/img11.webp',
-    'images/img12.webp',
+    'images/img12.jpg',
     'images/img13.webp',
     'images/img14.webp',
     'images/img15.webp',
     'images/img16.webp',
-    'images/img17.png',
-    'images/img18.png',
-    'images/img19.png',
-    'images/img20.png',
-    'images/img21.png',
+    'images/img17.jpg',
+    'images/img18.jpg',
+    'images/img19.jpg',
+    'images/img20.jpg',
+    'images/img21.jpg',
   ];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -55,18 +55,18 @@ export default function Slider() {
           onClick={handlePrevClick}
           className="absolute left-0 bg-gray-800 text-white p-2 rounded-full"
         >
-          Prev
+          {"<"}
         </button>
         <img
           src={images[currentImage]}
           alt={`Slide ${currentImage}`}
-          className="object-cover"
+          className="w-full h-full object-cover"
         />
         <button
           onClick={handleNextClick}
           className="absolute right-0 bg-gray-800 text-white p-2 rounded-full"
         >
-          Next
+          {">"}
         </button>
       </div>
     </div>

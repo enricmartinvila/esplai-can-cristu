@@ -1,5 +1,6 @@
 import React from 'react';
 import { useI18n } from '../Components/i18nContext';
+import { InformationCircleIcon } from '@heroicons/react/24/solid'
 
 const Inscripcions = () => {
   const { translations, handleSelectLanguage } = useI18n();
@@ -7,9 +8,9 @@ const Inscripcions = () => {
   return (
     <>
       <div className="w-full h-screen flex flex-wrap tablet:flex-col laptop:flex-row">
-        <div className="w-full h-1/2 tablet:w-full tablet:h-1/2 laptop:w-2/5 laptop:h-full border border-red overflow-auto bg-text">
-          <table className="w-full h-fit border border-gray-200">
-            <thead className=" text-white">
+        {/* <div className="w-full h-1/2 tablet:w-full tablet:h-1/2 laptop:w-2/5 laptop:h-full border-red overflow-auto bg-text">
+          <table className="w-full h-fit  border-gray-200">
+            <thead className=" text-white"
               <tr className="flex w-full py-3 border-b">
                 <th className="flex-1 text-center uppercase">Year</th>
                 <th className="flex-1 text-center uppercase">Group</th>
@@ -42,8 +43,8 @@ const Inscripcions = () => {
               </tr>
             </tbody>
           </table>
-        </div>
-        <div className="w-full justify-center h-1/2 tablet:w-full tablet:h-1/2 laptop:w-3/5 laptop:h-full border border-blue flex">
+        </div> */}
+        <div className="w-full justify-center h-1/2 tablet:w-full tablet:h-1/2 laptop:h-full flex">
           <div className="flex flex-col text-center items-center">
             <h1 className="text-5xl desktop:text-6xl mt-20 mb-20 text-center  text-white">
               {translations.inscripcions.title}
@@ -52,6 +53,7 @@ const Inscripcions = () => {
               Completa el seguent formulari per inscriure el teu infant a
               l'esplai:
             </p>
+            <InformationCircleIcon className="w-6 h-6 text-white" />
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdztNhBJTgHhbqXwgKznc4052USWdizVr6GPCf2hH2xYmCgAA/viewform?embedded=true"
               className="w-full h-full hidden laptop:block"

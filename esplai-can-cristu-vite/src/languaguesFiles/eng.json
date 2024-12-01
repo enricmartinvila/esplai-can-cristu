@@ -51,7 +51,17 @@
     "enter_form_button": "Enter Form"
   },
   "mainPage": {
-    "title": "Main",
-    "text": "lOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR."
+    "text-slider-titles": {
+      "what": "What?",
+      "how": "How?",
+      "who": "Who?",
+      "when": "When?"
+    },
+    "text-slider-textes": {
+      "what": "It is a space where we have fun and discover the world by playing. Where we learn, go on excursions, and get involved in our environment to transform society. At the esplai, we make new friends!",
+      "how": "Through games, gincanas, and workshops, we learn to work as a team and manage our emotions. We advocate for children's rights and educate ourselves in values such as solidarity, cooperation, and respect.",
+      "who": "At the esplai, children aged between five and seventeen participate, and monitors, on a voluntary basis, aged eighteen and older.",
+      "when": "Most activities are carried out on Saturday mornings or afternoons. During school holidays, we go camping, have colonies, and go on routes to enjoy nature and have fun living together."
+    }
   }
 }
