@@ -37,11 +37,11 @@ export default function Header() {
         className={`w-full mb-2 py-4 flex items-center fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}
       >
         {/* Logo */}
-        <div className="flex items-center mx-10 bg-transparent">
+        <div className="flex items-center mx-10 bg-transparent logo-container">
           <img
             src="/images/logo1.jpeg"
             alt="Logo"
-            className={`transition-all duration-300 ${isScrolled ? 'w-12' : 'w-16'}`}
+            className={`transition-all min-w-10 duration-300 logo ${isScrolled ? 'w-12' : 'w-16'}`}
           />
         </div>
 
@@ -72,7 +72,7 @@ export default function Header() {
               'w-full hidden tablet:block transition-transform duration-300 ease-in-out'
             }
           >
-            <ul className="flex flex-row items-center justify-center md:flex-row gap-24 font-bold text-white mobile:text-xs tablet:text-base laptop:text-xl">
+            <ul className="flex flex-row items-center md:flex-row  justify-between font-bold text-white mobile:text-xs tablet:text-base laptop:text-xl">
               <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/'} className="text-[#9e3841]">
                   {translations.menu.main}
@@ -110,7 +110,7 @@ export default function Header() {
 
       {/* Full-screen Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-[#F4C3C9] z-20 flex flex-col items-center justify-center">
+        <div className="fixed inset-0 bg-gradient-to-br from-[#e6a2ab] to-[#dd853e] z-20 flex flex-col items-center justify-center">
           <button
             onClick={toggleMenu}
             className="absolute top-4 right-4 text-[#9e3841]"
@@ -132,32 +132,32 @@ export default function Header() {
           </button>
           <nav>
             <ul className="flex flex-col items-center gap-8 font-bold text-[#9e3841] text-2xl">
-              <li>
+              <li className="duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/'} onClick={toggleMenu}>
                   {translations.menu.main}
                 </Link>
               </li>
-              <li>
+              <li className="duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/qui-som'} onClick={toggleMenu}>
                   {translations.menu.who}
                 </Link>
               </li>
-              <li>
+              <li className="duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/ideari'} onClick={toggleMenu}>
                   {translations.menu.ideas}
                 </Link>
               </li>
-              <li>
+              <li className="duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/calendari'} onClick={toggleMenu}>
                   {translations.menu.calendar}
                 </Link>
               </li>
-              <li>
+              <li className="duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/inscripcions'} onClick={toggleMenu}>
                   {translations.menu.inscriptions}
                 </Link>
               </li>
-              <li>
+              <li className="duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/contacte'} onClick={toggleMenu}>
                   {translations.menu.contact}
                 </Link>

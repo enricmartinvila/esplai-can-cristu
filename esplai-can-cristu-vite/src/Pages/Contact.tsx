@@ -6,9 +6,7 @@ export default function Contacte() {
   const { translations } = useI18n();
 
   return (
-    <div
-      className="flex-col items-center justify-center text-center"
-    >
+    <div className="flex-col items-center justify-center text-center">
       <h1 className="text-5xl desktop:text-6xl pb-12 p-5 font-bold text-white">
         {translations.titles.contact}
       </h1>
@@ -22,23 +20,22 @@ export default function Contacte() {
       <div className="flex-color w-full h-44 items-center justify-center text-center">
         <div className="flex justify-center pt-4">
           <ul className="flex flex-col items-center justify-center md:items-start">
-            <li className="flex items-center my-2 gap-2">
+            <li className="flex items-center my-2 gap-2 text-text hover:underline">
               <MapPinIcon className="h-6 w-6" />
               <span>
                 <a
                   href="https://maps.app.goo.gl/5RJqMXFDqSaJkfdMA"
                   className="font-bold"
                 >
-                 Carrer de Carrió, 22, 08242 Manresa, Barcelona
+                  Carrer de Carrió, 22, 08242 Manresa, Barcelona
                 </a>
               </span>
             </li>
-            <li className="flex items-center justify-start my-2 gap-2">
+            <li className="flex items-center justify-start my-2 gap-2 text-text hover:underline">
               <EnvelopeIcon className="h-6 w-6" />
               <a
                 className="cursor-pointer font-semibold"
-                href="                esplai.cancristu@gmail.com
-"
+                href="esplai.cancristu@gmail.com"
               >
                 esplai.cancristu@gmail.com
               </a>

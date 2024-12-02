@@ -5,7 +5,7 @@ export default {
     extend: {
       screens: {
         'mobile': '380px',      // Mobile breakpoint
-        'tablet': '768px',      // Tablet breakpoint
+        'tablet': '933px',      // Tablet breakpoint
         'laptop': '1280px',     // Laptop breakpoint
         'desktop': '1920px',    // Desktop breakpoint
         'xl': '2560px',         // Extra-large breakpoint

@@ -7,7 +7,9 @@ const QuiSom = () => {
 
   return (
     <div className="flex flex-col w-full items-center justify-center p-4">
-      <h1 className="text-5xl desktop:text-6xl mt-20 mb-24 text-white">{translations.quisom.title}</h1>
+      <h1 className="text-5xl desktop:text-6xl mt-20 mb-24 text-white">
+        {translations.quisom.title}
+      </h1>
       <div className="flex-col mobile:flex-col tablet:flex-row justify-center gap-8 mb-8">
         <div className="flex flex-col gap-4 mobile:gap-4 tablet:gap-10 tablet:flex-row">
           <RecountCard

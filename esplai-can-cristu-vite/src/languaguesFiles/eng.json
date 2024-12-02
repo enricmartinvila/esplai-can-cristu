@@ -48,7 +48,9 @@
   },
   "inscripcions": {
     "title": "Inscriptions",
-    "enter_form_button": "Enter Form"
+    "enter_form_button": "Enter Form",
+    "year": "Year",
+    "group": "Group"
   },
   "mainPage": {
     "text-slider-titles": {

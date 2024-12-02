@@ -22,13 +22,13 @@ const Timeline = () => {
       {upcomingEvents.map((item, index) => (
         <li key={index} className="mb-14 ms-6">
           <div className="absolute w-4 h-4 bg-gran rounded-full mt-2 -start-2 border border-white"></div>
-          <time className="mb-2 text-lg font-normal leading-none text-gray-400">
+          <time className="mb-2 text-lg font-normal leading-none text-text">
             {item.date}
           </time>
-          <h3 className="text-2xl font-semibold text-[#9e3841]">
+          <h3 className="text-2xl font-bold text-white">
             {item.title}
           </h3>
-          <p className="mb-6 text-lg font-normal text-gray-500">{item.text}</p>
+          <p className="mb-6 text-lg font-semibold text-text">{item.text}</p>
         </li>
       ))}
     </ol>

@@ -8,7 +8,7 @@ export default function MainPage() {
 
   return (
     <div className="flex items-center justify-center size-full">
-      <div className="flex w-4/6 h-2/3 flex-col laptop:flex-row pt-24 px-32">
+      <div className="flex w-4/6 mobile:w-full laptop:w-4/6 h-2/3 flex-col laptop:flex-row pt-24 px-32">
         <div className="flex flex-col items-center justify-center w-full laptop:w-1/2 p-2">
           <TextSlider />
         </div>
