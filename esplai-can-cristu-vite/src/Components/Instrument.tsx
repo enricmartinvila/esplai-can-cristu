@@ -106,4 +106,4 @@ const Instrument = () => {
   );
 };
 
-export default Accordion;
+export default Instrument;
