@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { ideariText } from '../constants/IdeariConstants';
 
 const Accordion = () => {
-  const [openIndex, setOpenIndex] = useState(1); // Set the second accordion to be open by default
-  const [openSubIndex, setOpenSubIndex] = useState({});
+  const [openIndex, setOpenIndex] = useState<number | null>(1); // Set the second accordion to be open by default
+  const [openSubIndex, setOpenSubIndex] = useState<{ [key: number]: number | null }>({});
 
-  const handleToggle = (index) => {
+  const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleSubToggle = (index, subIndex) => {
+  const handleSubToggle = (index: number, subIndex: number) => {
     setOpenSubIndex((prevState) => ({
       ...prevState,
       [index]: prevState[index] === subIndex ? null : subIndex,
@@ -27,8 +27,8 @@ const Accordion = () => {
                 index === 0
                   ? 'rounded-t-xl'
                   : index === ideariText.ideari.length - 1 && openIndex !== 1
-                    ? 'rounded-b-xl'
-                    : ''
+                  ? 'rounded-b-xl'
+                  : ''
               }`}
               onClick={() => handleToggle(index)}
             >
@@ -87,9 +87,7 @@ const Accordion = () => {
                           </svg>
                         </button>
                       </h2>
-                      <div
-                        className={`${openSubIndex[index] === subIndex ? '' : 'hidden'}`}
-                      >
+                      <div className={`${openSubIndex[index] === subIndex ? '' : 'hidden'}`}>
                         <div className="p-5 border border-b-0 border-gray-200">
                           <p className="text-[#9e3841] text-sm mobile:text-base tablet:text-lg laptop:text-xl desktop:text-2xl">
                             {valor.text}
