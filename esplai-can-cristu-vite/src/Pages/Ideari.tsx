@@ -1,6 +1,5 @@
 import React from "react"
-import { Accordion } from "../Components/accordion"
-
+import Accordion from '../Components/Accordion';
 
 export const Ideari = () => {
 
