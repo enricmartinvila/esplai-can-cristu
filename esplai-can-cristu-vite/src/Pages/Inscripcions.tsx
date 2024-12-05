@@ -56,7 +56,7 @@ const Inscripcions = () => {
             </div>
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdztNhBJTgHhbqXwgKznc4052USWdizVr6GPCf2hH2xYmCgAA/viewform?embedded=true"
-              className="w-1/2 tablet:w-full min-h-[1000px]"
+              className="w-1/2 tablet:w-full min-h-[1000px] mobile:overflow-y-hidden"
             >
               S&#39;està carregant…
             </iframe>
