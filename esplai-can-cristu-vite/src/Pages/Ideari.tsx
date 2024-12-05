@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../Components/Accordion";
+import Accordion from "../Components/Instrument";
 
 export const Ideari = () => {
     return (
