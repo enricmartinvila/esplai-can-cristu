@@ -64,7 +64,7 @@ const Instrument = () => {
                       <h2>
                         <button
                           type="button"
-                          className="flex items-center justify-between w-full p-5 py-3 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
+                          className="flex items-center justify-between w-full p-5 py-3 font-medium rtl:text-right text-gray-500 border border-b-0 border-[#9e3841] focus:ring-2 focus:ring-[#9e3841] gap-3"
                           onClick={() => handleSubToggle(index, subIndex)}
                         >
                           <span className="text-[#9e3841] font-semibold text-base mobile:text-lg tablet:text-base laptop:text-xl desktop:text-2xl">
@@ -88,7 +88,7 @@ const Instrument = () => {
                         </button>
                       </h2>
                       <div className={`${openSubIndex[index] === subIndex ? '' : 'hidden'}`}>
-                        <div className="p-5 border border-b-0 border-gray-200">
+                        <div className="p-5 border border-b-0 border-[#9e3841]">
                           <p className="text-[#9e3841] text-sm mobile:text-base tablet:text-lg laptop:text-xl desktop:text-2xl">
                             {valor.text}
                           </p>

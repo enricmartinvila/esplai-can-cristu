@@ -14,7 +14,7 @@ const Calendari = () => {
       <p className="text-base text-text mobile:text-lg tablet:text-xl laptop:text-2xl desktop:text-3xl mb-8">
         {translations.calendarPage.text}
       </p>
-      <div className="w-full h-full flex justify-center items-center pt-12 overflow-auto max-h-screen">
+      <div className="w-full h-full flex justify-center items-center pt-12 overflow-y-hidden max-h-screen">
         <Timeline />
       </div>
     </div>
