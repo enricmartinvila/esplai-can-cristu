@@ -50,7 +50,7 @@ const Inscripcions = () => {
               onClick={openModal}
             >
               <p className="py-6 px-3 text-base desktop:text-xl text-text pb-6 ">
-                Necisites ajuda per inscriure al teu infant?
+                {translations.inscripcions.help}
               </p>
               <InformationCircleIcon className="w-8 h-8 text-white" />
             </div>

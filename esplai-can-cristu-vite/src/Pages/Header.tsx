@@ -34,10 +34,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`w-full mb-2 py-4 flex items-center fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}
+        className={`w-full mb-2 py-4 flex items-center fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2 ' : 'py-4'}`}
       >
         {/* Logo */}
-        <div className="flex items-center mx-10 bg-transparent logo-container">
+        <div className="flex items-center mx-10 logo-container">
           <img
             src="/images/logo1.jpeg"
             alt="Logo"
@@ -72,7 +72,7 @@ export default function Header() {
               'w-full hidden tablet:block transition-transform duration-300 ease-in-out'
             }
           >
-            <ul className="flex flex-row items-center md:flex-row  justify-between font-bold text-white mobile:text-xs tablet:text-base laptop:text-xl">
+            <ul className="flex flex-row items-center md:flex-row justify-between font-bold text-white mobile:text-xs tablet:text-base laptop:text-xl">
               <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
                 <Link to={'/'} className="text-[#9e3841]">
                   {translations.menu.main}
@@ -102,6 +102,16 @@ export default function Header() {
                 <Link to={'/contacte'} className="text-[#9e3841]">
                   {translations.menu.contact}
                 </Link>
+              </li>
+              <li>
+                <select
+                  className="text-[#9e3841] bg-transparent cursor-pointer border border-[#9e3841] rounded px-2 py-1"
+                  onChange={handleChange}
+                >
+                  <option className='cursor-pointer' value="es">Español</option>
+                  <option className='cursor-pointer' value="ca">Català</option>
+                  <option className='cursor-pointer' value="en">English</option>
+                </select>
               </li>
             </ul>
           </nav>
@@ -161,6 +171,16 @@ export default function Header() {
                 <Link to={'/contacte'} onClick={toggleMenu}>
                   {translations.menu.contact}
                 </Link>
+              </li>
+              <li>
+                <select
+                  className="text-[#9e3841] bg-transparent border border-[#9e3841] rounded p-2"
+                  onChange={handleChange}
+                >
+                  <option value="es">Español</option>
+                  <option value="ca">Català</option>
+                  <option value="en">English</option>
+                </select>
               </li>
             </ul>
           </nav>

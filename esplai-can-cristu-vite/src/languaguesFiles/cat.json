@@ -50,7 +50,8 @@
     "title": "Inscripcions",
     "enter_form_button": "Entrar al formulari",
     "year": "Any",
-    "group": "Grup"
+    "group": "Grup",
+    "help": "Necesites ajuda per inscriure al teu infant?"
   },
   "mainPage": {
     "text-slider-titles": {

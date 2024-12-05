@@ -23,7 +23,7 @@ export const Accordion = () => {
           <h2>
             <button
               type="button"
-              className={`flex items-center bg-[#F4C3C9] justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-[#9e3841] gap-3 ${
+              className={`flex items-center bg-transparent justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-[#9e3841] gap-3 ${
                 index === 0
                   ? "rounded-t-xl"
                   : index === ideariText.ideari.length - 1 && openIndex !== 1
@@ -53,7 +53,7 @@ export const Accordion = () => {
             </button>
           </h2>
           <div className={`${openIndex === index ? "" : "hidden"}`}>
-            <div className="p-5 border border-b border-[#9e3841] bg-[#F4C3C9]">
+            <div className="p-5 border border-b border-[#9e3841] bg-transparent">
               <p className="mb-2 text-[#9e3841] text-sm mobile:text-base tablet:text-lg laptop:text-xl desktop:text-2xl">
                 {item.text}
               </p>
@@ -64,7 +64,7 @@ export const Accordion = () => {
                       <h2>
                         <button
                           type="button"
-                          className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
+                          className="flex items-center justify-between w-full p-5 py-3 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
                           onClick={() => handleSubToggle(index, subIndex)}
                         >
                           <span className="text-[#9e3841] font-semibold text-base mobile:text-lg tablet:text-base laptop:text-xl desktop:text-2xl">
