@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../Components/Instrument";
+import Instrument from "../Components/Instrument";
 
 export const Ideari = () => {
     return (
@@ -8,7 +8,7 @@ export const Ideari = () => {
           Ideari
         </h1>
         <div className=" px-12 py-6 laptop:px-32  laptop:py-16">
-          <Accordion />
+          <Instrument />
         </div>
       </div>
     );

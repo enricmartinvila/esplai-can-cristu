@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ideariText } from '../constants/IdeariConstants';
 
-const Accordion = () => {
+const Instrument = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(1); // Set the second accordion to be open by default
   const [openSubIndex, setOpenSubIndex] = useState<{ [key: number]: number | null }>({});
 
