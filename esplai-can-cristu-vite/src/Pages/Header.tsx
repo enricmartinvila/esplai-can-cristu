@@ -31,6 +31,11 @@ export default function Header() {
     };
   }, []);
 
+  const goToMain = () => {
+    history.push('/');
+  };
+
+
   return (
     <>
       <header
@@ -38,11 +43,13 @@ export default function Header() {
       >
         {/* Logo */}
         <div className="flex items-center mx-10 logo-container">
-          <img
-            src="/images/logo1.jpeg"
-            alt="Logo"
-            className={`transition-all min-w-10 duration-300 logo ${isScrolled ? 'w-12' : 'w-16'}`}
-          />
+          <Link to={'/'}>
+            <img
+              src="/images/logo1.jpeg"
+              alt="Logo"
+              className={`transition-all min-w-10 duration-300 logo ${isScrolled ? 'w-12' : 'w-16'}`}
+            />
+          </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -62,6 +69,7 @@ export default function Header() {
                 d="M4 6h16M4 12h16m-7 6h7"
               ></path>
             </svg>
+         
           </button>
         </div>
 
@@ -174,7 +182,7 @@ export default function Header() {
               </li>
               <li>
                 <select
-                  className="text-[#9e3841] bg-transparent border border-[#9e3841] rounded p-2"
+                  className="text-[#9e3841] bg-transparent p-2"
                   onChange={handleChange}
                 >
                   <option value="es">Español</option>

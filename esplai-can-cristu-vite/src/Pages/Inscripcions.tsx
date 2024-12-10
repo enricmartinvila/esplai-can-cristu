@@ -46,7 +46,7 @@ const Inscripcions = () => {
               {translations.inscripcions.title}
             </h1>
             <div
-              className="flex cursor-pointer items-center justify-center duration-300 ease-in-out transform hover:scale-105"
+              className="flex cursor-pointer mobile:px-4 items-center justify-center duration-300 ease-in-out transform hover:scale-105"
               onClick={openModal}
             >
               <p className="py-6 px-3 text-base desktop:text-xl text-text pb-6 ">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useI18n } from '../Components/i18nContext';
-import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 
 export default function Contacte() {
   const { translations } = useI18n();

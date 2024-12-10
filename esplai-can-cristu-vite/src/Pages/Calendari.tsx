@@ -11,7 +11,7 @@ const Calendari = () => {
       <h1 className="text-5xl desktop:text-6xl mt-20 mb-24 text-white">
         {translations.calendarPage.title}
       </h1>
-      <p className="text-base text-text mobile:text-lg tablet:text-xl laptop:text-2xl desktop:text-3xl mb-8">
+      <p className="text-base mobile:px-4 text-text mobile:text-lg tablet:text-xl laptop:text-2xl desktop:text-3xl mb-8">
         {translations.calendarPage.text}
       </p>
       <div className="w-full h-full flex justify-center items-center pt-12 overflow-y-hidden max-h-screen">

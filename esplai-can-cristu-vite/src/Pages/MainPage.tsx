@@ -4,7 +4,6 @@ import { useI18n } from '../Components/i18nContext';
 import TextSlider from '../Components/TextSlider';
 
 export default function MainPage() {
-  const { translations } = useI18n();
 
   return (
     <div className="flex items-center justify-center size-full">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 export default function Slider() {
   const images = [
@@ -53,9 +54,9 @@ export default function Slider() {
       <div className="flex justify-center items-center">
         <button
           onClick={handlePrevClick}
-          className="absolute left-0 bg-gray-800 text-white p-2 rounded-full"
+          className="absolute left-0 bg-gray-400/40 text-white p-2 rounded-r-md"
         >
-          {"<"}
+          <ChevronLeftIcon className="size-5" />
         </button>
         <img
           src={images[currentImage]}
@@ -64,9 +65,9 @@ export default function Slider() {
         />
         <button
           onClick={handleNextClick}
-          className="absolute right-0 bg-gray-800 text-white p-2 rounded-full"
+          className="absolute right-0 bg-gray-400/40 text-white p-2 rounded-l-md"
         >
-          {">"}
+          <ChevronRightIcon className="size-4 tablet:size-6" />
         </button>
       </div>
     </div>
