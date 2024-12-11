@@ -44,8 +44,8 @@ export const calendarText: CalendarTextItem[] = [
   },
   {
     title: "Colònies Nadal",
-    date: "27-30 December 2024",
-    text: "Les colònies de nadal, normalment tenen una duració de 3 dies (dues nits), i es fan parelles de grup que van de colònies junts.",
+    date: "27 December 2024",
+    text: "(27-30)Les colònies de nadal, normalment tenen una duració de 3 dies (dues nits), i es fan parelles de grup que van de colònies junts.",
   },
   {
     title: "Primer dissabte d'any nou",
@@ -64,13 +64,13 @@ export const calendarText: CalendarTextItem[] = [
   },
   {
     title: "Colònies Setmana Santa",
-    date: "12-14 April 2025",
-    text: "Les colònies de Setmana santa es duen a terme amb l'objectiu de preparar les caramelles que es realitzen el cap de setmana següent. Tots els grups de l'esplai van junts a la mateixa casa i es realitzen activitats junts i separats",
+    date: "12 April 2025",
+    text: "(12-14) Les colònies de Setmana santa es duen a terme amb l'objectiu de preparar les caramelles que es realitzen el cap de setmana següent. Tots els grups de l'esplai van junts a la mateixa casa i es realitzen activitats junts i separats",
   },
   {
     title: "Caramelles",
-    date: "19-20 April 2025",
-    text: "Es canten caramelles per tot la ciutat acompanyats de diferents balls de bastons.",
+    date: "19 April 2025",
+    text: "(19-20)Es canten caramelles per tot la ciutat acompanyats de diferents balls de bastons.",
   },
   {
     title: "Sant Jordi",
