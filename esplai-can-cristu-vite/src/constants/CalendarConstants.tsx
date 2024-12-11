@@ -33,9 +33,9 @@ export const calendarText: CalendarTextItem[] = [
     text: "Matinal formativa.",
   },
   {
-    title: "No es fa esplai",
+    title: "Pont",
     date: "1 November 2024",
-    text: "No es fa esplai.",
+    text: "Pont",
   },
   {
     title: "Pont",
@@ -54,32 +54,27 @@ export const calendarText: CalendarTextItem[] = [
   },
   {
     title: "Primer dissabte d'any nou",
-    date: "11 January 2024",
+    date: "11 January 2025",
     text: "Primer dissabte d'any nou.",
   },
   {
-    title: "Pont de la llum no esplai",
-    date: "February 2024",
-    text: "Pont de la llum no esplai.",
+    title: "Pont",
+    date: "February 2025",
+    text: "Pont",
   },
   {
     title: "Matinal per confirmar",
-    date: "22 March 2024",
+    date: "22 March 2025",
     text: "Matinal per confirmar.",
   },
   {
-    title: "ELF per confirmar",
-    date: "22-23 March 2024",
-    text: "ELF per confirmar.",
-  },
-  {
     title: "Calçotada",
-    date: "6 April 2024",
+    date: "6 April 2025",
     text: "Calçotada.",
   },
   {
-    title: "Colònies SSS",
-    date: "12-14 April 2024",
+    title: "Colònies Setmana Santa",
+    date: "12-14 April 2025",
     text: "Colònies SSS.",
   },
   {
