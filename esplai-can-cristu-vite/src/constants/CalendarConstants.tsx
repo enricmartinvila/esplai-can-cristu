@@ -18,11 +18,6 @@ export const calendarText: CalendarTextItem[] = [
     text: "Primer dissabte.",
   },
   {
-    title: "Setmana del cigró",
-    date: "3-8 November 2024",
-    text: "Setmana del cigró.",
-  },
-  {
     title: "Caminada",
     date: "20 October 2024",
     text: "Caminada.",
@@ -43,14 +38,14 @@ export const calendarText: CalendarTextItem[] = [
     text: "Pont.",
   },
   {
-    title: "Nadalada i sopar",
+    title: "Nadalada i xocolatada",
     date: "14 December 2024",
-    text: "Nadalada i sopar.",
+    text: "La nadalada es una tarda on tot els grups del centre s'ajunten per a fer cohesió i fer activitats relacionades amb el nadal. Mes tard es fa la xocolatada que normalment organitzen els pares i mares del centre!",
   },
   {
     title: "Colònies Nadal",
     date: "27-30 December 2024",
-    text: "Colònies Nadal.",
+    text: "Les colònies de nadal, normalment tenen una duració de 3 dies (dues nits), i es fan parelles de grup que van de colònies junts.",
   },
   {
     title: "Primer dissabte d'any nou",
@@ -68,19 +63,14 @@ export const calendarText: CalendarTextItem[] = [
     text: "Matinal per confirmar.",
   },
   {
-    title: "Calçotada",
-    date: "6 April 2025",
-    text: "Calçotada.",
-  },
-  {
     title: "Colònies Setmana Santa",
     date: "12-14 April 2025",
-    text: "Colònies SSS.",
+    text: "Les colònies de Setmana santa es duen a terme amb l'objectiu de preparar les caramelles que es realitzen el cap de setmana següent. Tots els grups de l'esplai van junts a la mateixa casa i es realitzen activitats junts i separats",
   },
   {
     title: "Caramelles",
     date: "19-20 April 2025",
-    text: "Caramelles.",
+    text: "Es canten caramelles per tot la ciutat acompanyats de diferents balls de bastons.",
   },
   {
     title: "Sant Jordi",
@@ -95,11 +85,6 @@ export const calendarText: CalendarTextItem[] = [
   {
     title: "Piscinada",
     date: "15 June 2025",
-    text: "Piscinada.",
-  },
-  {
-    title: "Sortida final de curs",
-    date: "28-29 June 2025",
-    text: "Sortida final de curs.",
+    text: "Es l'úultim dissabte de l'esplai i es fa una piscinada per acomiadar el curs.",
   },
 ];
