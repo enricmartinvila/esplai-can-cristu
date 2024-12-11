@@ -1,5 +1,4 @@
 import React from 'react';
-import { calendarText } from '../constants/CalendarConstants';
 import Timeline from '../Components/Timeline';
 import { useI18n } from '../Components/i18nContext';
 
@@ -14,7 +13,7 @@ const Calendari = () => {
       <p className="text-base mobile:px-4 text-text mobile:text-lg tablet:text-xl laptop:text-2xl desktop:text-3xl mb-8">
         {translations.calendarPage.text}
       </p>
-      <div className="w-full h-full flex justify-center items-center pt-12 overflow-y-hidden max-h-screen">
+      <div className="w-full h-full flex justify-center items-center pt-12 ">
         <Timeline />
       </div>
     </div>

@@ -113,7 +113,7 @@ export default function Header() {
               </li>
               <li>
                 <select
-                  className="text-[#9e3841] bg-transparent cursor-pointer border border-[#9e3841] rounded px-2 py-1"
+                  className="text-[#9e3841] bg-transparent cursor-pointer rounded px-2 py-1"
                   onChange={handleChange}
                 >
                   <option className='cursor-pointer' value="es">Español</option>
