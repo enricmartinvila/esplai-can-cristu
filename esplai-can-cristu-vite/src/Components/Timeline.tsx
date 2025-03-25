@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { calendarText, CalendarTextItem } from '../constants/CalendarConstants';
+import { CalendarTextItem } from '../constants/CalendarConstants';
 import { ref, get } from 'firebase/database';
 import { database } from '../fireBaseConfig';
 
