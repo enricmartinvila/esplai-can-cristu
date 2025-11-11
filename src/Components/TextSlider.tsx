@@ -1,4 +1,3 @@
-// src/Components/TextSlider.jsx
 import React, { useState, useEffect, useMemo } from "react";
 import { useI18n } from "./i18nContext";
 
@@ -50,7 +49,7 @@ const TextSlider = () => {
 
   const current = items[index];
 
-  const renderText = (text: string) => {
+  const renderText = (text) => {
     const words = text.split(" ");
     return words.map((word, i) => {
       const highlight = (i + 1) % 7 === 0;
@@ -64,9 +63,9 @@ const TextSlider = () => {
   };
 
   return (
-    <div>
-      {/* Tabs/títols */}
-      <div className="mb-3 flex flex-wrap gap-2">
+    <div className="w-full">
+      {/* Tabs / Títols */}
+      <div className="mb-4 flex flex-wrap gap-2">
         {items.map((item, i) => {
           const isActive = i === index;
           return (
@@ -87,13 +86,21 @@ const TextSlider = () => {
         })}
       </div>
 
-      {/* Text */}
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-text">
-        {current?.title}
-      </h2>
-      <p className="mt-2 text-sm leading-relaxed text-slate-100">
-        {renderText(current?.text)}
-      </p>
+      {/* Contenedor de texto con altura fija */}
+      <div className="relative overflow-hidden">
+        <div
+          key={current.key}
+          className="transition-all duration-700 ease-in-out"
+          style={{ minHeight: "7rem" }} // altura fija (~112px)
+        >
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-text mb-2">
+            {current?.title}
+          </h2>
+          <p className="text-sm leading-relaxed text-slate-100">
+            {renderText(current?.text)}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
