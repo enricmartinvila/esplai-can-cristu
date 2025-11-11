@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useI18n } from '../Components/i18nContext';
-import { InformationCircleIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import React, { useState } from "react";
+import { useI18n } from "../Components/i18nContext";
+import { InformationCircleIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   const handleOutsideClick = (e) => {
-    if (e.target.id === 'modal-overlay') {
+    if (e.target.id === "modal-overlay") {
       onClose();
     }
   };
@@ -14,14 +14,18 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div
       id="modal-overlay"
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
       onClick={handleOutsideClick}
     >
-      <div className="relative bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full">
-        <div className="flex justify-between items-center pb-8">
-          <h1 className="text-xl font-bold">Taula de grups</h1>
-          <button className="text-gray-600 cursor-pointer" onClick={onClose}>
-            <XMarkIcon className="w-6 h-6" />
+      <div className="relative w-full max-w-3xl rounded-2xl border border-white/10 bg-slate-950 px-6 py-6 tablet:px-8 tablet:py-8 shadow-2xl shadow-black/60">
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-lg font-semibold text-text">Taula de grups</h2>
+          <button
+            className="text-slate-300 hover:text-white transition-colors"
+            onClick={onClose}
+            aria-label="Tancar"
+          >
+            <XMarkIcon className="h-6 w-6" />
           </button>
         </div>
         {children}
@@ -38,73 +42,79 @@ const Inscripcions = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <>
-      <div className="flex flex-wrap tablet:flex-col laptop:flex-row overflow-y-auto overflow-x-hidden">
-        <div className="w-full justify-center h-1/2 tablet:w-full tablet:h-1/2 laptop:h-full flex">
-          <div className="flex flex-col text-center items-center min-w-[700px]">
-            <h1 className="text-5xl desktop:text-6xl mt-20 mb-20 text-center text-white">
-              {translations.inscripcions.title}
-            </h1>
-            <div
-              className="flex cursor-pointer mobile:px-4 items-center justify-center duration-300 ease-in-out transform hover:scale-105"
-              onClick={openModal}
-            >
-              <p className="py-6 px-3 text-base desktop:text-xl text-text pb-6 ">
-                {translations.inscripcions.help}
-              </p>
-              <InformationCircleIcon className="w-8 h-8 text-white" />
-            </div>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdztNhBJTgHhbqXwgKznc4052USWdizVr6GPCf2hH2xYmCgAA/viewform?embedded=true"
-              className="w-1/2 tablet:w-full min-h-[1000px] mobile:overflow-y-hidden"
-            >
-              S&#39;està carregant…
-            </iframe>
-          </div>
-        </div>
-      </div>
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-28 pb-16">
+        {/* Títol */}
+        <header className="mb-6 text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-text">
+            Esplai Can Cristu
+          </p>
+          <h1 className="text-4xl desktop:text-5xl font-extrabold tracking-tight text-text">
+            {translations.inscripcions.title}
+          </h1>
+        </header>
 
+        {/* Ajuda + icona info */}
+        <button
+          type="button"
+          onClick={openModal}
+          className="mb-6 inline-flex items-center justify-center gap-2 rounded-full border border-text/40 bg-slate-900/60 px-4 py-2 text-sm mobile:text-base text-slate-100 shadow-sm shadow-black/40 transition-transform hover:scale-105 hover:bg-slate-900"
+        >
+          <InformationCircleIcon className="h-5 w-5 text-text" />
+          <span className="text-center">{translations.inscripcions.help}</span>
+        </button>
+
+        {/* Formulari (iframe) */}
+        <div className="w-full rounded-2xl border border-white/10 bg-slate-900/60 p-4 shadow-lg shadow-black/40">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdztNhBJTgHhbqXwgKznc4052USWdizVr6GPCf2hH2xYmCgAA/viewform?embedded=true"
+            className="h-[900px] w-full"
+          >
+            S&#39;està carregant…
+          </iframe>
+        </div>
+      </section>
+
+      {/* Modal tabla de grupos */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <table className="w-full h-fit border rounded border-gray-200 bg-gradient-to-tl from-text to-[#dd853e]">
-          <thead className=" text-text ">
-            <tr className="flex w-full py-3 border-b font-bold text-xl">
-              <th className="flex-1 text-center text-white uppercase">
-                {translations.inscripcions.year}
-              </th>
-              <th className="flex-1 text-center text-white uppercase">
-                {translations.inscripcions.group}
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-gradient-to-tl from-text to-[#dd853e] font-semibold">
-            <tr className="flex w-full py-3">
-              <td className="flex-1 text-center text-white">2018 - 2019</td>
-              <td className="flex-1 text-center text-white">Xalaps</td>
-            </tr>
-            <tr className="flex w-full py-3">
-              <td className="flex-1 text-center text-white">2016 - 2017</td>
-              <td className="flex-1 text-center text-white">Mixus</td>
-            </tr>
-            <tr className="flex w-full py-3">
-              <td className="flex-1 text-center text-white">2014 - 2015</td>
-              <td className="flex-1 text-center text-white">Buxis</td>
-            </tr>
-            <tr className="flex w-full py-3">
-              <td className="flex-1 text-center text-white">2012 - 2013</td>
-              <td className="flex-1 text-center text-white">Paxops</td>
-            </tr>
-            <tr className="flex w-full py-3">
-              <td className="flex-1 text-center text-white">2010 - 2011</td>
-              <td className="flex-1 text-center text-white">Xirucs</td>
-            </tr>
-            <tr className="flex w-full py-3">
-              <td className="flex-1 text-center text-white">2008 - 2009</td>
-              <td className="flex-1 text-center text-white">Xirois</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/90">
+          <table className="min-w-full border-separate border-spacing-0">
+            <thead className="bg-text/90">
+              <tr>
+                <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide text-white">
+                  {translations.inscripcions.year}
+                </th>
+                <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide text-white">
+                  {translations.inscripcions.group}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { year: "2018 - 2019", group: "Xalaps" },
+                { year: "2016 - 2017", group: "Mixus" },
+                { year: "2014 - 2015", group: "Buxis" },
+                { year: "2012 - 2013", group: "Paxops" },
+                { year: "2010 - 2011", group: "Xirucs" },
+                { year: "2008 - 2009", group: "Xirois" },
+              ].map((row) => (
+                <tr
+                  key={row.year}
+                  className="border-t border-white/10 bg-slate-900/80 hover:bg-slate-900"
+                >
+                  <td className="px-4 py-3 text-center text-sm text-slate-100">
+                    {row.year}
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-semibold text-text">
+                    {row.group}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </Modal>
-    </>
+    </main>
   );
 };
 
