@@ -1,108 +1,79 @@
-import React, { useState } from 'react';
-import { ideariText } from '../constants/IdeariConstants';
+import React, { useState } from "react";
+import { ideariText } from "../constants/IdeariConstants";
+
+type Valor = { title: string; text: string };
+type IdeariItem = { title: string; text: string; valors?: Valor[] };
 
 const Instrument = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(1); // Set the second accordion to be open by default
-  const [openSubIndex, setOpenSubIndex] = useState<{ [key: number]: number | null }>({});
+  const items = (ideariText.ideari || []) as IdeariItem[];
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  if (!items.length) {
+    return (
+      <p className="text-sm text-slate-300">
+        No hay contenido configurado para el ideario.
+      </p>
+    );
+  }
 
-  const handleSubToggle = (index: number, subIndex: number) => {
-    setOpenSubIndex((prevState) => ({
-      ...prevState,
-      [index]: prevState[index] === subIndex ? null : subIndex,
-    }));
-  };
+  const active = items[activeIndex];
 
   return (
-    <>
-      {ideariText.ideari.map((item, index) => (
-        <div key={index}>
-          <h2>
+    <div className="flex flex-col gap-6">
+      {/* Pestañas superiores */}
+      <div className="flex gap-2 overflow-x-auto rounded-full bg-slate-900/60 p-1 w-fit">
+        {items.map((item, index) => {
+          const isActive = index === activeIndex;
+          return (
             <button
+              key={index}
               type="button"
-              className={`flex items-center bg-transparent justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-[#9e3841] gap-3 ${
-                index === 0
-                  ? 'rounded-t-xl'
-                  : index === ideariText.ideari.length - 1 && openIndex !== 1
-                  ? 'rounded-b-xl'
-                  : ''
-              }`}
-              onClick={() => handleToggle(index)}
+              onClick={() => setActiveIndex(index)}
+              className={[
+                "whitespace-nowrap rounded-full px-4 py-2 text-xs font-semibold transition-colors",
+                isActive
+                  ? "bg-text text-white"
+                  : "bg-transparent text-slate-100 hover:bg-white/10",
+              ].join(" ")}
             >
-              <span className="text-[#9e3841] font-semibold text-base mobile:text-lg tablet:text-xl laptop:text-xl desktop:text-2xl">
-                {item.title}
-              </span>
-              <svg
-                data-accordion-icon
-                className={`w-3 h-3 ${openIndex === index ? '' : 'rotate-180'} shrink-0`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="#9e3841"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
+              {item.title}
             </button>
-          </h2>
-          <div className={`${openIndex === index ? '' : 'hidden'}`}>
-            <div className="p-5 border border-b border-[#9e3841] bg-transparent">
-              <p className="mb-2 text-[#9e3841] text-sm mobile:text-base tablet:text-lg laptop:text-xl desktop:text-2xl">
-                {item.text}
-              </p>
-              {item.valors && (
-                <div>
-                  {item.valors.map((valor, subIndex) => (
-                    <div key={subIndex}>
-                      <h2>
-                        <button
-                          type="button"
-                          className="flex items-center justify-between w-full p-5 py-3 font-medium rtl:text-right text-gray-500 border border-b-0 border-[#9e3841] focus:ring-2 focus:ring-[#9e3841] gap-3"
-                          onClick={() => handleSubToggle(index, subIndex)}
-                        >
-                          <span className="text-[#9e3841] font-semibold text-base mobile:text-lg tablet:text-base laptop:text-xl desktop:text-2xl">
-                            {valor.title}
-                          </span>
-                          <svg
-                            data-accordion-icon
-                            className={`w-3 h-3 ${openSubIndex[index] === subIndex ? '' : 'rotate-180'} shrink-0`}
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 10 6"
-                          >
-                            <path
-                              stroke="#9e3841"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M9 5 5 1 1 5"
-                            />
-                          </svg>
-                        </button>
-                      </h2>
-                      <div className={`${openSubIndex[index] === subIndex ? '' : 'hidden'}`}>
-                        <div className="p-5 border border-b-0 border-[#9e3841]">
-                          <p className="text-[#9e3841] text-sm mobile:text-base tablet:text-lg laptop:text-xl desktop:text-2xl">
-                            {valor.text}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+          );
+        })}
+      </div>
+
+      {/* Contenido principal del bloque activo */}
+      <section className="rounded-2xl bg-white/5 p-5 tablet:p-6 laptop:p-8 shadow-lg shadow-black/40 ring-1 ring-white/10">
+        <h2 className="mb-3 text-lg font-semibold text-text">{active.title}</h2>
+        <p className="text-sm mobile:text-base laptop:text-lg leading-relaxed text-slate-100">
+          {active.text}
+        </p>
+      </section>
+
+      {/* Valors del bloque activo, si existen */}
+      {active.valors && active.valors.length > 0 && (
+        <section className="space-y-3">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-text">
+            Valors relacionats
+          </h3>
+          <div className="grid gap-3 tablet:grid-cols-2">
+            {active.valors.map((valor, idx) => (
+              <article
+                key={idx}
+                className="rounded-2xl bg-slate-950/60 p-4 shadow-inner shadow-black/30 border border-white/10"
+              >
+                <h4 className="mb-2 text-sm font-semibold text-text">
+                  {valor.title}
+                </h4>
+                <p className="text-xs mobile:text-sm leading-relaxed text-slate-100">
+                  {valor.text}
+                </p>
+              </article>
+            ))}
           </div>
-        </div>
-      ))}
-    </>
+        </section>
+      )}
+    </div>
   );
 };
 

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useI18n } from '../Components/i18nContext';
-import { Link } from 'react-router-dom';
+// src/Components/Header.jsx
+import React, { useState, useEffect } from "react";
+import { useI18n } from "../Components/i18nContext";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const { translations, handleSelectLanguage } = useI18n();
+  const { translations, handleSelectLanguage, currLang } = useI18n();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newLanguage = event.target.value;
     handleSelectLanguage(newLanguage);
   };
@@ -16,47 +17,63 @@ export default function Header() {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const goToMain = () => {
-    history.push('/');
-  };
-
+  const menuItems = [
+    { to: "/", label: translations.menu.main },
+    { to: "/qui-som", label: translations.menu.who },
+    { to: "/ideari", label: translations.menu.ideas },
+    { to: "/calendari", label: translations.menu.calendar },
+    { to: "/inscripcions", label: translations.menu.inscriptions },
+    { to: "/contacte", label: translations.menu.contact },
+  ];
 
   return (
     <>
       <header
-        className={`w-full mb-2 py-4 flex items-center fixed top-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2 ' : 'py-4'}`}
+        className={[
+          "fixed inset-x-0 top-0 z-30",
+          "transition-all duration-300",
+          "border-b border-white/10",
+          "backdrop-blur bg-slate-950/80",
+          isScrolled ? "py-2" : "py-4",
+        ].join(" ")}
       >
-        {/* Logo */}
-        <div className="flex items-center mx-10 logo-container">
-          <Link to={'/'}>
-            <img
-              src="/images/logo1.jpeg"
-              alt="Logo"
-              className={`transition-all min-w-10 duration-300 logo ${isScrolled ? 'w-12' : 'w-16'}`}
-            />
-          </Link>
-        </div>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 tablet:px-6">
+          {/* IZQUIERDA: logo + nombre simplificado */}
+          <div className="flex items-center">
+            <Link
+              to="/"
+              className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+            >
+              <img
+                src="/images/logo1.jpeg"
+                alt="Esplai Can Cristu"
+                className={`rounded-full border border-text/40 object-cover transition-all duration-300 ${
+                  isScrolled ? "h-10 w-10" : "h-12 w-12"
+                }`}
+              />
+              <span className="hidden tablet:inline text-sm font-semibold uppercase tracking-[0.18em] text-text">
+                Esplai Can Cristu
+              </span>
+            </Link>
+          </div>
 
-        {/* Hamburger Menu for Mobile */}
-        <div className="absolute top-4 right-4 tablet:hidden">
-          <button onClick={toggleMenu} className="text-[#9e3841]">
+          {/* Botón hamburguesa (móvil) */}
+          <button
+            onClick={toggleMenu}
+            className="tablet:hidden text-text"
+            aria-label="Obrir menú"
+          >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -67,74 +84,69 @@ export default function Header() {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
+              />
             </svg>
-         
           </button>
-        </div>
 
-        {/* Contenedor centrado para el texto del menú */}
-        <div className="w-full flex mx-16">
-          <nav
-            className={
-              'w-full hidden tablet:block transition-transform duration-300 ease-in-out'
-            }
-          >
-            <ul className="flex flex-row items-center md:flex-row justify-between font-bold text-white mobile:text-xs tablet:text-base laptop:text-xl">
-              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/'} className="text-[#9e3841]">
-                  {translations.menu.main}
-                </Link>
-              </li>
-              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/qui-som'} className="text-[#9e3841]">
-                  {translations.menu.who}
-                </Link>
-              </li>
-              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/ideari'} className="text-[#9e3841]">
-                  {translations.menu.ideas}
-                </Link>
-              </li>
-              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/calendari'} className="text-[#9e3841]">
-                  {translations.menu.calendar}
-                </Link>
-              </li>
-              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/inscripcions'} className="text-[#9e3841]">
-                  {translations.menu.inscriptions}
-                </Link>
-              </li>
-              <li className="transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/contacte'} className="text-[#9e3841]">
-                  {translations.menu.contact}
-                </Link>
-              </li>
-              <li>
-                <select
-                  className="text-[#9e3841] bg-transparent cursor-pointer rounded px-2 py-1"
-                  onChange={handleChange}
+          {/* Menú escritorio */}
+          <nav className="hidden tablet:flex items-center gap-8">
+            <ul className="flex items-center gap-6 font-semibold text-sm laptop:text-base">
+              {menuItems.map((item) => (
+                <li
+                  key={item.to}
+                  className="transition-transform duration-200 hover:scale-105"
                 >
-                  <option className='cursor-pointer' value="es">Español</option>
-                  <option className='cursor-pointer' value="ca">Català</option>
-                  <option className='cursor-pointer' value="en">English</option>
-                </select>
-              </li>
+                  <Link
+                    to={item.to}
+                    className="text-text hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
+
+            {/* Selector idioma */}
+            <div className="relative ml-4">
+              <select
+                value={currLang}
+                onChange={handleChange}
+                className="appearance-none rounded-full border border-white/20 bg-slate-900/80 pr-8 pl-3 py-1 text-xs font-medium text-slate-100 focus:outline-none focus:ring-1 focus:ring-text"
+              >
+                <option value="ca">CA</option>
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+              </select>
+
+              {/* icono flecha */}
+              <svg
+                className="pointer-events-none absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 text-slate-300"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
           </nav>
         </div>
       </header>
 
-      {/* Full-screen Mobile Menu */}
+      {/* Menú mòbil pantalla completa */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-br from-[#e6a2ab] to-[#dd853e] z-20 flex flex-col items-center justify-center">
+        <div className="fixed inset-0 z-40 bg-gradient-to-b from-slate-950 via-slate-900 to-black flex flex-col items-center justify-center">
           <button
             onClick={toggleMenu}
-            className="absolute top-4 right-4 text-[#9e3841]"
+            className="absolute top-4 right-4 text-text"
+            aria-label="Tancar menú"
           >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -145,52 +157,49 @@ export default function Header() {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
-              ></path>
+              />
             </svg>
           </button>
-          <nav>
-            <ul className="flex flex-col items-center gap-8 font-bold text-[#9e3841] text-2xl">
-              <li className="duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/'} onClick={toggleMenu}>
-                  {translations.menu.main}
-                </Link>
-              </li>
-              <li className="duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/qui-som'} onClick={toggleMenu}>
-                  {translations.menu.who}
-                </Link>
-              </li>
-              <li className="duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/ideari'} onClick={toggleMenu}>
-                  {translations.menu.ideas}
-                </Link>
-              </li>
-              <li className="duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/calendari'} onClick={toggleMenu}>
-                  {translations.menu.calendar}
-                </Link>
-              </li>
-              <li className="duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/inscripcions'} onClick={toggleMenu}>
-                  {translations.menu.inscriptions}
-                </Link>
-              </li>
-              <li className="duration-300 ease-in-out transform hover:scale-110">
-                <Link to={'/contacte'} onClick={toggleMenu}>
-                  {translations.menu.contact}
-                </Link>
-              </li>
-              <li>
-                <select
-                  className="text-[#9e3841] bg-transparent p-2"
-                  onChange={handleChange}
+
+          <nav className="flex flex-col items-center gap-8">
+            <ul className="flex flex-col items-center gap-6 text-2xl font-bold text-text">
+              {menuItems.map((item) => (
+                <li
+                  key={item.to}
+                  className="transition-transform duration-200 hover:scale-110"
                 >
-                  <option value="es">Español</option>
-                  <option value="ca">Català</option>
-                  <option value="en">English</option>
-                </select>
-              </li>
+                  <Link to={item.to} onClick={toggleMenu}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
+
+            {/* Selector idioma en móvil */}
+            <div className="relative mt-8">
+              <select
+                value={currLang}
+                onChange={handleChange}
+                className="appearance-none rounded-full border border-white/20 bg-slate-900/80 pr-8 pl-4 py-2 text-sm font-medium text-slate-100 focus:outline-none focus:ring-1 focus:ring-text"
+              >
+                <option value="ca">Català</option>
+                <option value="es">Castellano</option>
+                <option value="en">English</option>
+              </select>
+              <svg
+                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-300"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
           </nav>
         </div>
       )}

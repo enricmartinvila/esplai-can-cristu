@@ -1,57 +1,57 @@
 {
   "menu": {
-    "main": "Main",
-    "who": "Who we are",
-    "ideas": "Ideas",
+    "main": "Home",
+    "who": "About us",
+    "ideas": "Ideology",
     "calendar": "Calendar",
-    "inscriptions": "Inscriptions",
+    "inscriptions": "Registrations",
     "contact": "Contact"
   },
   "titles": {
-    "main": "Main",
-    "who": "Who we are",
-    "ideas": "Ideas",
+    "main": "Home",
+    "who": "About us",
+    "ideas": "Ideology",
     "calendar": "Calendar",
-    "inscriptions": "Inscriptions",
+    "inscriptions": "Registrations",
     "contact": "Contact"
   },
   "aboutustexts": {
-    "titleinside": "HEALTH, MEALS, TERRITORY, AND EMOTIONS.",
-    "firstText": "Cal Masses is a farmhouse located in Sant Salvador de Guardiola, in the Bages region, next to the natural park of Montserrat Mountain, near Manresa and within the D.O. Pla de Bages.",
-    "secondText": "Since 2014, we have been practicing organic farming, primarily focusing on ecological vegetable cultivation with local sales. However, due to the drought in recent years, we have shifted towards other crops.",
-    "thirdText": "During the year 2023, we have recovered a portion of the vineyards that were once present on the estate.",
-    "fourthText": "We always work and seek the most sustainable way to cultivate the land, incorporating regenerative agriculture practices."
+    "titleinside": "GROWTH, COMMUNITY AND SOCIAL TRANSFORMATION",
+    "firstText": "Esplai Can Cristu is a non-profit leisure and educational center in Manresa where children and young people learn through play, coexistence and values such as solidarity, respect and cooperation.",
+    "secondText": "For more than fifty years we have worked through volunteering and associationism to offer community-based education rooted in the neighborhood and committed to social transformation.",
+    "thirdText": "We educate through feminism, environmentalism, inclusion and diversity, placing the child at the center and promoting their active participation.",
+    "fourthText": "We accompany children and young people in their personal and collective growth, creating safe and open spaces where they can express themselves, share and transform their environment."
   },
   "maintexts": {
-    "text": "ENJOY AND STOP THE TIME."
+    "text": "GROWING TOGETHER THROUGH PLAY AND CHANGE"
   },
   "calendarPage": {
     "title": "Calendar",
-    "text": "Here you can see the events that will take place during the course."
+    "text": "Check all the activities, outings and events scheduled during the school year."
   },
   "reccountCardsSubTexts": {
-    "firstText": "Years making history",
-    "secondText": "Groups",
-    "thirdText": "Children"
+    "firstText": "Years of history",
+    "secondText": "Active groups",
+    "thirdText": "Children and teens"
   },
   "quisom": {
     "title": "Who we are",
-    "text1": "We are Esplai Can Cristu, a non-profit leisure center located in premises provided by the parish of Cristo Rey, at Calle Carrió, 22 in Manresa.",
-    "text2": "The premises are a three-story building consisting of several rooms, behind the church of Cristo Rey. The neighborhood where Esplai Can Cristu is located is called Paseo and Surroundings and is situated in the city center, around Paseo Pere III. It is a well-off neighborhood with a socio-economic demographic mainly of upper-middle class, mostly aged between 40 and 50 years.",
-    "text3": "It is characterized by the presence of Paseo Pere III, the main pedestrian street of Manresa, which, along with the surrounding streets, gathers most of the local commerce and where various cultural entities of the city are grouped. The church of Cristo Rey, behind which the premises of the esplai are located, is situated in the first section of the Paseo."
+    "text1": "We are Esplai Can Cristu, a non-profit leisure and educational center located in premises provided by the parish of Crist Rei, at Carrer Carrió 22 in Manresa.",
+    "text2": "The building has three floors with several activity rooms, located behind the church of Crist Rei. The neighborhood, known as Passeig i Rodalies, is in the heart of Manresa around Passeig Pere III, an area with a mainly middle-class demographic aged between 40 and 50 years.",
+    "text3": "It is characterized by the presence of Passeig Pere III, the main pedestrian street of Manresa, which together with the surrounding streets concentrates much of the local commerce and various cultural organizations. The church of Crist Rei, behind which our facilities are located, stands at the beginning of the Passeig."
   },
   "historiaDelCentre": {
     "title": "History of the center",
-    "text1": "During the year 1967, the Junior Movement arrived at Cristo Rey, although at the beginning it was very different from how it is today. The main difference is that in the past, boys and girls were in separate groups. A few years later, between 1972 and 1973, the girls' group moved to the current location of Cristo Rey, at Carrer Carrió number 22. After a while, the boys did too, so boys and girls started sharing the premises, but they still did not share groups. It was not until the year 1974-1975 that they started to be mixed groups.",
-    "text2": "Years later, in 1978, after an assembly held in Manresa, the Junior Movement became MIJAC, that is, the Children's and Youth Movement of Catholic Action, but the dynamics of the center remained the same. It was that same year that MIJAC experienced spectacular growth and many boys and girls joined. During the 2020-21 school year, a series of changes were made to the center, making the process to change the entity and become part of Esplac, and the 2021-22 school year began as a new entity, changing the name from Mijac Cristo Rey to Esplai Can Cristu.",
-    "text3": "Currently, Esplai Can Cristu is a secular and progressive association that works from volunteering for social transformation, based on children's rights, through popular education and leisure. It aims to be a key educational agent in social transformation, inclusive, diverse, and rooted in the neighborhood. To do this, a leisure space has been created with the pillars of secularity, volunteering, and associationism, placing the child's protagonism at the center and educating horizontally, trying to educate children and young people through learning and guiding them through the values that are to be reflected. At the same time, they want to break with the socio-economic elitism of the leisure movement in our area; education is a right that all children have, and therefore, the esplai must be a representative space of the surrounding reality. From Esplai Can Cristu, the values that are generally promoted are: environmentalism, feminism, rootedness, associationism, secular and critical attitude, transformative action, and the accompaniment of children and young people."
+    "text1": "In 1967 the Junior Movement arrived at Crist Rei. At first boys and girls participated in separate groups. A few years later, between 1972 and 1973, the girls’ group moved to the current premises on Carrer Carrió 22, and shortly afterwards the boys joined them. Mixed groups began in 1974-1975.",
+    "text2": "In 1978, after an assembly held in Manresa, the Junior Movement became MIJAC (Children’s and Youth Movement of Catholic Action). Many years later, during the 2020-21 school year, the center started the process of joining Esplac, and in 2021-22 we began a new stage under the name Esplai Can Cristu.",
+    "text3": "Today Esplai Can Cristu is a secular and progressive association working through volunteering for social transformation, based on children’s rights and popular education. We aim to be an inclusive, diverse and community-rooted educational agent. Our values include environmentalism, feminism, local identity, associationism, critical thinking, transformative action and the accompaniment of children and young people."
   },
   "inscripcions": {
-    "title": "Inscriptions",
-    "enter_form_button": "Enter Form",
+    "title": "Registrations",
+    "enter_form_button": "Open form",
     "year": "Year",
     "group": "Group",
-    "help": "Need help to register your child?"
+    "help": "Need help registering your child?"
   },
   "mainPage": {
     "text-slider-titles": {
@@ -61,10 +61,10 @@
       "when": "When?"
     },
     "text-slider-textes": {
-      "what": "It is a space where we have fun and discover the world by playing. Where we learn, go on excursions, and get involved in our environment to transform society. At the esplai, we make new friends!",
-      "how": "Through games, gincanas, and workshops, we learn to work as a team and manage our emotions. We advocate for children's rights and educate ourselves in values such as solidarity, cooperation, and respect.",
-      "who": "At the esplai, children aged between five and seventeen participate, and monitors, on a voluntary basis, aged eighteen and older.",
-      "when": "Most activities are carried out on Saturday mornings or afternoons. During school holidays, we go camping, have colonies, and go on routes to enjoy nature and have fun living together."
+      "what": "It is a space where we have fun and discover the world through play. We learn, go on excursions and get involved in our community to help transform society. At the esplai we make new friends!",
+      "how": "Through games, challenges and workshops we learn teamwork and how to manage our emotions. We defend children’s rights and grow with values such as solidarity, cooperation and respect.",
+      "who": "Children between five and seventeen take part in the esplai, together with voluntary youth leaders aged eighteen and above.",
+      "when": "Most activities take place on Saturday mornings or afternoons. During school holidays we organize camps, summer colonies and hiking routes to enjoy nature and live together in a fun and educational way."
     }
   }
 }

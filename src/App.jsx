@@ -13,7 +13,7 @@ import Inscripcions from './Pages/Inscripcions';
 function App() {
   return (
     <>
-      <div className="min-h-screen overflow-x-hidden max-w-full w-screen pt-[4.75rem] font-sans bg-gradient-to-br from-[#e6a2ab] to-[#dd853e]">
+      <div className="min-h-screen overflow-x-hidden max-w-full w-screen font-sans">
         <I18nProvider>
           <Header />
           <Routes>
