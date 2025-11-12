@@ -34,7 +34,7 @@ export default function Contacte() {
             <li className="flex items-center justify-center gap-3 text-text transition-transform hover:scale-105">
               <MapPinIcon className="h-6 w-6" />
               <a
-                href="https://maps.app.goo.gl/5RJqMXFDqSaJkfdMA"
+                href="https://www.google.com/maps/place/Carrer+de+Carri%C3%B3,+22,+08242+Manresa,+Barcelona/@41.7284331,1.8204972,642m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a4580d736c2c79:0xcf0af0fca977fed9!8m2!3d41.7284291!4d1.8230721!16s%2Fg%2F11ckqrcmdd?hl=es&entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold hover:underline"
