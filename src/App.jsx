@@ -9,6 +9,7 @@ import MainPage from './Pages/MainPage';
 import { Routes, Route } from 'react-router-dom';
 import QuiSom from './Pages/QuiSom';
 import Inscripcions from './Pages/Inscripcions';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contacte" element={<Contacte />} />
           </Routes>
         </I18nProvider>
+        <Analytics />
       </div>
     </>
   );
