@@ -21,26 +21,26 @@ export default function MainPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-blue-50 text-gray-800">
       {/* HERO */}
       <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pt-24 pb-16 laptop:flex-row laptop:items-center laptop:gap-16">
         {/* Columna texto */}
         <div className="flex-1 space-y-8">
           <header className="space-y-3">
-            <p className="inline-flex items-center rounded-full bg-text/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-text">
+            <p className="inline-flex items-center rounded-full bg-text/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-text">
               Esplai · Lleure · Transformació social
             </p>
             <h1 className="text-balance text-4xl font-extrabold tracking-tight laptop:text-5xl text-text">
               {maintexts.text || "GAUDEIX I ATURA EL TEMPS"}
             </h1>
-            <p className="max-w-xl text-base text-slate-200">
+            <p className="max-w-xl text-base text-gray-700">
               {about.firstText ||
                 "Som un espai de lleure on infants i joves descobreixen el món jugant, convivint i transformant el seu entorn."}
             </p>
           </header>
 
           {/* TextSlider explicant Què / Com / Qui / Quan */}
-          <div className="rounded-2xl bg-white/5 p-5 shadow-lg shadow-black/40 ring-1 ring-white/10 backdrop-blur">
+          <div className="rounded-2xl bg-white/80 p-5 shadow-lg shadow-gray-200 ring-1 ring-gray-200 backdrop-blur">
             <TextSlider />
           </div>
 
@@ -54,7 +54,7 @@ export default function MainPage() {
             </Link>
             <Link
               to="/calendari"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2 text-xs font-semibold text-slate-100 transition-colors hover:border-text hover:text-text"
+              className="inline-flex items-center justify-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold text-gray-700 transition-colors hover:border-text hover:text-text"
             >
               {calendar.title || "Calendari"} ·{" "}
               {calendar.text || "Veure activitats del curs"}
@@ -64,21 +64,21 @@ export default function MainPage() {
 
         {/* Columna slider imatges */}
         <aside className="flex-1">
-          <div className="relative h-[320px] w-full overflow-hidden rounded-3xl border border-white/10 bg-black/40 shadow-2xl shadow-black/60 laptop:h-[420px]">
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+          <div className="relative h-[320px] w-full overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl shadow-gray-300 laptop:h-[420px]">
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
             <Slider />
           </div>
         </aside>
       </section>
 
       {/* FRANJA DE “STATS” */}
-      <section className="border-t border-white/10 bg-slate-900/60">
+      <section className="border-t border-gray-200 bg-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 tablet:flex-row tablet:items-center tablet:justify-between">
           <div className="max-w-md">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-text">
               {about.titleinside || "SALUT, ALIMENTACIÓ, TERRITORI I EMOCIONS."}
             </h2>
-            <p className="mt-2 text-sm text-slate-200">
+            <p className="mt-2 text-sm text-gray-700">
               {about.secondText ||
                 "Eduquem en valors com la solidaritat, la cooperació, el respecte i el compromís amb l’entorn."}
             </p>
@@ -89,12 +89,12 @@ export default function MainPage() {
                 stat.label && (
                   <div
                     key={stat.label}
-                    className="rounded-2xl bg-white/5 px-3 py-3 text-center text-xs shadow-inner shadow-black/40"
+                    className="rounded-2xl bg-sky-100 px-3 py-3 text-center text-xs shadow-inner shadow-gray-200"
                   >
                     <div className="text-lg font-bold text-text">
                       {stat.value}
                     </div>
-                    <div className="mt-1 text-[0.7rem] uppercase tracking-wide text-slate-200">
+                    <div className="mt-1 text-[0.7rem] uppercase tracking-wide text-gray-700">
                       {stat.label}
                     </div>
                   </div>

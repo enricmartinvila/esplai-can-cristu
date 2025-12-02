@@ -10,7 +10,7 @@ const Instrument = () => {
 
   if (!items.length) {
     return (
-      <p className="text-sm text-slate-300">
+      <p className="text-sm text-gray-600">
         No hay contenido configurado para el ideario.
       </p>
     );
@@ -21,7 +21,7 @@ const Instrument = () => {
   return (
     <div className="flex flex-col gap-6">
       {/* Pestañas superiores */}
-      <div className="flex gap-2 overflow-x-auto rounded-full bg-slate-900/60 p-1 w-fit">
+      <div className="flex gap-2 overflow-x-auto rounded-full bg-gray-100 p-1 w-fit">
         {items.map((item, index) => {
           const isActive = index === activeIndex;
           return (
@@ -33,7 +33,7 @@ const Instrument = () => {
                 "whitespace-nowrap rounded-full px-4 py-2 text-xs font-semibold transition-colors",
                 isActive
                   ? "bg-text text-white"
-                  : "bg-transparent text-slate-100 hover:bg-white/10",
+                  : "bg-transparent text-gray-700 hover:bg-gray-200",
               ].join(" ")}
             >
               {item.title}
@@ -43,9 +43,9 @@ const Instrument = () => {
       </div>
 
       {/* Contenido principal del bloque activo */}
-      <section className="rounded-2xl bg-white/5 p-5 tablet:p-6 laptop:p-8 shadow-lg shadow-black/40 ring-1 ring-white/10">
+      <section className="rounded-2xl bg-white/90 p-5 tablet:p-6 laptop:p-8 shadow-lg shadow-gray-200 ring-1 ring-gray-200">
         <h2 className="mb-3 text-lg font-semibold text-text">{active.title}</h2>
-        <p className="text-sm mobile:text-base laptop:text-lg leading-relaxed text-slate-100">
+        <p className="text-sm mobile:text-base laptop:text-lg leading-relaxed text-gray-700">
           {active.text}
         </p>
       </section>
@@ -60,12 +60,12 @@ const Instrument = () => {
             {active.valors.map((valor, idx) => (
               <article
                 key={idx}
-                className="rounded-2xl bg-slate-950/60 p-4 shadow-inner shadow-black/30 border border-white/10"
+                className="rounded-2xl bg-sky-50 p-4 shadow-inner shadow-gray-100 border border-gray-200"
               >
                 <h4 className="mb-2 text-sm font-semibold text-text">
                   {valor.title}
                 </h4>
-                <p className="text-xs mobile:text-sm leading-relaxed text-slate-100">
+                <p className="text-xs mobile:text-sm leading-relaxed text-gray-700">
                   {valor.text}
                 </p>
               </article>

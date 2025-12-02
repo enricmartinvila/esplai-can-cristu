@@ -37,7 +37,7 @@ const Timeline = () => {
   if (loading) {
     return (
       <div className="flex w-full items-center justify-center py-8">
-        <p className="text-sm text-slate-300">
+        <p className="text-sm text-gray-600">
           Carregant el calendari d’activitats...
         </p>
       </div>
@@ -46,7 +46,7 @@ const Timeline = () => {
 
   if (error) {
     return (
-      <div className="rounded-2xl border border-red-500/40 bg-red-950/40 px-4 py-6 text-sm text-red-100">
+      <div className="rounded-2xl border border-red-300 bg-red-50 px-4 py-6 text-sm text-red-700">
         {error}
       </div>
     );
@@ -54,7 +54,7 @@ const Timeline = () => {
 
   if (!data || !data.calendarText || data.calendarText.length === 0) {
     return (
-      <div className="rounded-2xl border border-white/15 bg-slate-900/60 px-4 py-6 text-sm text-slate-200">
+      <div className="rounded-2xl border border-gray-200 bg-sky-50 px-4 py-6 text-sm text-gray-700">
         Els monitors i les monitores estem actualitzant les dades del calendari.
         Torna a consultar-lo ben aviat.
       </div>
@@ -68,7 +68,7 @@ const Timeline = () => {
       {items.map((item, idx) => (
         <article
           key={`${item.date}-${idx}`}
-          className="rounded-2xl border border-white/12 bg-slate-950/70 p-4 tablet:p-5 shadow-inner shadow-black/40"
+          className="rounded-2xl border border-gray-200 bg-white p-4 tablet:p-5 shadow-inner shadow-gray-100"
         >
           <div className="flex flex-col gap-2 tablet:flex-row tablet:items-baseline tablet:gap-4">
             {/* Fecha en “pill” */}
@@ -77,10 +77,10 @@ const Timeline = () => {
             </span>
 
             <div className="flex-1">
-              <h3 className="text-base laptop:text-lg font-semibold text-white">
+              <h3 className="text-base laptop:text-lg font-semibold text-gray-900">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm laptop:text-base leading-relaxed text-slate-200">
+              <p className="mt-2 text-sm laptop:text-base leading-relaxed text-gray-700">
                 {item.text}
               </p>
             </div>

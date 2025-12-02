@@ -41,8 +41,8 @@ export default function Header() {
         className={[
           "fixed inset-x-0 top-0 z-30",
           "transition-all duration-300",
-          "border-b border-white/10",
-          "backdrop-blur bg-slate-950/80",
+          "border-b border-gray-200",
+          "backdrop-blur bg-white/95",
           isScrolled ? "py-2" : "py-4",
         ].join(" ")}
       >
@@ -98,7 +98,7 @@ export default function Header() {
                 >
                   <Link
                     to={item.to}
-                    className="text-text hover:text-white transition-colors"
+                    className="text-text hover:text-gray-900 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -111,7 +111,7 @@ export default function Header() {
               <select
                 value={currLang}
                 onChange={handleChange}
-                className="appearance-none rounded-full border border-white/20 bg-slate-900/80 pr-8 pl-3 py-1 text-xs font-medium text-slate-100 focus:outline-none focus:ring-1 focus:ring-text"
+                className="appearance-none rounded-full border border-gray-300 bg-white pr-8 pl-3 py-1 text-xs font-medium text-gray-700 focus:outline-none focus:ring-1 focus:ring-text"
               >
                 <option value="ca">CA</option>
                 <option value="es">ES</option>
@@ -120,7 +120,7 @@ export default function Header() {
 
               {/* icono flecha */}
               <svg
-                className="pointer-events-none absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 text-slate-300"
+                className="pointer-events-none absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -139,7 +139,7 @@ export default function Header() {
 
       {/* Menú mòbil pantalla completa */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-gradient-to-b from-slate-950 via-slate-900 to-black flex flex-col items-center justify-center">
+        <div className="fixed inset-0 z-40 bg-gradient-to-b from-sky-100 via-blue-50 to-sky-100 flex flex-col items-center justify-center">
           <button
             onClick={toggleMenu}
             className="absolute top-4 right-4 text-text"
@@ -180,14 +180,14 @@ export default function Header() {
               <select
                 value={currLang}
                 onChange={handleChange}
-                className="appearance-none rounded-full border border-white/20 bg-slate-900/80 pr-8 pl-4 py-2 text-sm font-medium text-slate-100 focus:outline-none focus:ring-1 focus:ring-text"
+                className="appearance-none rounded-full border border-gray-300 bg-white pr-8 pl-4 py-2 text-sm font-medium text-gray-700 focus:outline-none focus:ring-1 focus:ring-text"
               >
                 <option value="ca">Català</option>
                 <option value="es">Castellano</option>
                 <option value="en">English</option>
               </select>
               <svg
-                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-300"
+                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"

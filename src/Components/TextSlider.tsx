@@ -40,7 +40,7 @@ const TextSlider = () => {
 
   if (!total) {
     return (
-      <div className="text-xs text-slate-300">
+      <div className="text-xs text-gray-600">
         Configura <code>mainPage.text-slider-titles</code> i{" "}
         <code>mainPage.text-slider-textes</code> a les traduccions.
       </div>
@@ -54,7 +54,7 @@ const TextSlider = () => {
     return words.map((word, i) => {
       const highlight = (i + 1) % 7 === 0;
       return (
-        <span key={i} className={highlight ? "text-text" : "text-slate-100"}>
+        <span key={i} className={highlight ? "text-text" : "text-gray-700"}>
           {word}
           {i < words.length - 1 && " "}
         </span>
@@ -77,7 +77,7 @@ const TextSlider = () => {
                 "rounded-full px-3 py-1 text-xs font-semibold transition-colors",
                 isActive
                   ? "bg-text text-white"
-                  : "bg-white/5 text-slate-100 hover:bg-white/10",
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200",
               ].join(" ")}
             >
               {item?.title}
@@ -96,7 +96,7 @@ const TextSlider = () => {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-text mb-2">
             {current?.title}
           </h2>
-          <p className="text-sm leading-relaxed text-slate-100">
+          <p className="text-sm leading-relaxed text-gray-700">
             {renderText(current?.text)}
           </p>
         </div>

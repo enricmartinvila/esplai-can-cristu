@@ -10,7 +10,7 @@ const QuiSom = () => {
   const historia = translations.historiaDelCentre || {};
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-blue-50 text-gray-800">
       {/* QUI SOM */}
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-16">
         <header className="text-center mb-10">
@@ -44,7 +44,7 @@ const QuiSom = () => {
         </div>
 
         {/* Text bloque QUI SOM */}
-        <article className="rounded-2xl bg-white/5 p-6 laptop:p-10 desktop:p-12 shadow-lg shadow-black/40 ring-1 ring-white/10 text-base desktop:text-lg leading-relaxed text-slate-100 space-y-6">
+        <article className="rounded-2xl bg-white/90 p-6 laptop:p-10 desktop:p-12 shadow-lg shadow-gray-200 ring-1 ring-gray-200 text-base desktop:text-lg leading-relaxed text-gray-800 space-y-6">
           <p>{quisom.text1}</p>
           <p>{quisom.text2}</p>
           <p>{quisom.text3}</p>
@@ -52,7 +52,7 @@ const QuiSom = () => {
       </section>
 
       {/* HISTÒRIA DEL CENTRE */}
-      <section className="border-t border-white/10 bg-slate-900/40">
+      <section className="border-t border-gray-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-14">
           <header className="text-center mb-10">
             <h2 className="text-balance text-3xl desktop:text-4xl font-bold tracking-tight text-text">
@@ -60,7 +60,7 @@ const QuiSom = () => {
             </h2>
           </header>
 
-          <article className="rounded-2xl bg-white/5 p-6 laptop:p-10 desktop:p-12 shadow-lg shadow-black/40 ring-1 ring-white/10 text-base desktop:text-lg leading-relaxed text-slate-100 space-y-8">
+          <article className="rounded-2xl bg-white/90 p-6 laptop:p-10 desktop:p-12 shadow-lg shadow-gray-200 ring-1 ring-gray-200 text-base desktop:text-lg leading-relaxed text-gray-800 space-y-8">
             <p>{historia.text1}</p>
             <p>{historia.text2}</p>
             <p>{historia.text3}</p>
